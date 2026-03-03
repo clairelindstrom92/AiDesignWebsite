@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design Tokens ────────────────────────────────────────────────────────── */
+:root {
+  --ivory:       #faf7f2;
+  --champagne:   #f5ede2;
+  --blush:       #f2d8d5;
+  --parchment:   #f0e4d0;
+  --gold:        #c9a966;
+  --gold-light:  #e0c98a;
+  --gold-dim:    #9a7a40;
+  --rose:        #c4878a;
+  --rose-light:  #e8b4b8;
+  --warmblack:   #16100d;
+  --warm-900:    #2a1a10;
+  --warm-800:    #3d2820;
+  --taupe:       #8a7060;
+  --taupe-light: #c0aa98;
+
+  --border-gold:    rgba(201, 169, 102, 0.25);
+  --border-rose:    rgba(196, 135, 138, 0.2);
+  --border-light:   rgba(255, 255, 255, 0.15);
+  --border-warm:    rgba(201, 169, 102, 0.12);
+
+  --glow-gold:  0 0 60px rgba(201, 169, 102, 0.3), 0 0 120px rgba(201, 169, 102, 0.12);
+  --glow-rose:  0 0 40px rgba(196, 135, 138, 0.25);
+  --shadow-card: 0 4px 40px rgba(42, 26, 16, 0.12);
+  --shadow-deep: 0 20px 60px rgba(22, 16, 13, 0.25);
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--warm-900);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ── Typography ───────────────────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+.font-display { font-family: 'Playfair Display', Georgia, serif; }
+.font-italic  { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; }
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--champagne); }
+::-webkit-scrollbar-thumb { background: rgba(201,169,102,0.4); border-radius: 3px; }
+
+/* ── Buttons ──────────────────────────────────────────────────────────────── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 13px 28px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-gold:hover {
+  background: var(--gold-light);
+  box-shadow: var(--glow-gold);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--warm-900);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 12px 26px;
+  border: 1px solid var(--border-gold);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-outline:hover {
+  background: rgba(201,169,102,0.06);
+  border-color: var(--gold);
+  color: var(--gold-dim);
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 12px 26px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.btn-white:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.4);
+}
+
+/* ── Glass (dark section variant) ────────────────────────────────────────── */
+.glass-dark {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(16px);
+}
+
+/* ── Glass (light section variant) ───────────────────────────────────────── */
+.glass-light {
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(201,169,102,0.15);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-card);
+}
+
+/* ── Card ─────────────────────────────────────────────────────────────────── */
+.card-luxury {
+  background: #fff;
+  border: 1px solid var(--border-warm);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-luxury:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-deep);
+}
+
+/* ── Gold label/tag ───────────────────────────────────────────────────────── */
+.label-gold {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 3px 10px;
+  background: rgba(201,169,102,0.1);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+}
+
+.label-rose {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rose);
+  padding: 3px 10px;
+  background: rgba(196,135,138,0.1);
+  border: 1px solid var(--border-rose);
+  border-radius: 20px;
+}
+
+/* ── Divider ──────────────────────────────────────────────────────────────── */
+.divider-gold {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto;
+}
+
+/* ── Text utilities ───────────────────────────────────────────────────────── */
+.text-gold   { color: var(--gold); }
+.text-rose   { color: var(--rose); }
+.text-taupe  { color: var(--taupe); }
+.text-ivory  { color: var(--ivory); }
+.glow-gold   { filter: drop-shadow(0 0 20px rgba(201,169,102,0.5)); }
+
+/* ── Animations ───────────────────────────────────────────────────────────── */
+@keyframes floatY {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-16px); }
+}
+@keyframes shimmer {
+  0%,100% { opacity: 0.5; }
+  50%     { opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(60px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pulseRing {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+@keyframes typingDot {
+  0%,60%,100% { transform: translateY(0); opacity: 0.4; }
+  30%         { transform: translateY(-5px); opacity: 1; }
+}
+@keyframes sparkle {
+  0%,100% { transform: scale(1) rotate(0deg); opacity: 0.7; }
+  50%     { transform: scale(1.4) rotate(15deg); opacity: 1; }
+}
+
+.animate-float    { animation: floatY 8s ease-in-out infinite; }
+.animate-shimmer  { animation: shimmer 4s ease-in-out infinite; }
+.animate-fade-up  { animation: fadeUp 0.7s ease-out forwards; }
+.animate-slide-up { animation: slideUp 0.45s cubic-bezier(0.16,1,0.3,1) forwards; }
+.animate-fade-in  { animation: fadeIn 0.4s ease-out forwards; }
+.animate-sparkle  { animation: sparkle 2.5s ease-in-out infinite; }
+
+/* ── Chat bubbles ─────────────────────────────────────────────────────────── */
+.bubble-user {
+  background: linear-gradient(135deg, rgba(201,169,102,0.15), rgba(196,135,138,0.1));
+  border: 1px solid rgba(201,169,102,0.2);
+  border-radius: 18px 18px 4px 18px;
+  padding: 12px 16px;
+  color: var(--warm-900);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  max-width: 85%;
+  align-self: flex-end;
+  white-space: pre-wrap;
+}
+
+.bubble-ai {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(201,169,102,0.12);
+  border-radius: 18px 18px 18px 4px;
+  padding: 12px 16px;
+  color: var(--warm-900);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  max-width: 88%;
+  align-self: flex-start;
+  white-space: pre-wrap;
+  box-shadow: 0 2px 12px rgba(42,26,16,0.06);
+}
+
+/* ── Typing indicator ─────────────────────────────────────────────────────── */
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: inline-block;
+  animation: typingDot 1.2s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* ── Section backgrounds ──────────────────────────────────────────────────── */
+.bg-ivory     { background: var(--ivory); }
+.bg-champagne { background: var(--champagne); }
+.bg-warmblack { background: var(--warmblack); }
+.bg-warm-900  { background: var(--warm-900); }
