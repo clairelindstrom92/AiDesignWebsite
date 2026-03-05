@@ -47,7 +47,7 @@ export default function Navbar({ onStartChat }) {
               className="font-display text-lg font-medium tracking-wide"
               style={{ color: 'var(--warm-900)' }}
             >
-              OAI Solutions
+              AIO Solutions
             </span>
           </a>
 

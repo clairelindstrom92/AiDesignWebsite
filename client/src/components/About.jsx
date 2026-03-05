@@ -1,17 +1,17 @@
 import { ArrowRight, Linkedin, Github, Instagram, Mail } from 'lucide-react';
 
-const CALENDLY = import.meta.env.VITE_CALENDLY_LINK || 'https://calendly.com/oaisolutions';
+const CALENDLY = import.meta.env.VITE_CALENDLY_LINK || 'https://calendly.com/aiosolutions';
 
 const TEAM = [
   {
     name: 'Claire Lindstrom',
     title: 'Co-Founder · AI Design Engineer',
     image: '/images/laptop-beach.png',
-    bio: 'Claire leads the design and branding side of OAI Solutions, combining high-end aesthetics with AI-powered precision. She specializes in building brand identities and digital experiences that are impossible to ignore.',
+    bio: 'Claire leads the design and branding side of AIO Solutions, combining high-end aesthetics with AI-powered precision. She specializes in building brand identities and digital experiences that are impossible to ignore.',
     social: [
       { icon: Linkedin,  href: 'https://linkedin.com/in/clairelindstrom', label: 'LinkedIn' },
       { icon: Github,    href: 'https://github.com/clairelindstrom',      label: 'GitHub' },
-      { icon: Instagram, href: 'https://instagram.com/oaisolutions',      label: 'Instagram' },
+      { icon: Instagram, href: 'https://instagram.com/aiosolutions',      label: 'Instagram' },
       { icon: Mail,      href: 'mailto:moonravendigital@gmail.com',       label: 'Email' },
     ],
   },
@@ -19,10 +19,10 @@ const TEAM = [
     name: 'Michael Smith',
     title: 'Co-Founder · AI Engineer',
     image: '/images/office-woman.png',
-    bio: 'Michael drives the engineering and AI infrastructure at OAI Solutions. He architects custom AI integrations, lead automation systems, and cloud infrastructure that power the intelligent solutions our clients depend on.',
+    bio: 'Michael drives the engineering and AI infrastructure at AIO Solutions. He architects custom AI integrations, lead automation systems, and cloud infrastructure that power the intelligent solutions our clients depend on.',
     social: [
       { icon: Linkedin,  href: 'https://linkedin.com/in/michaelsmith',    label: 'LinkedIn' },
-      { icon: Github,    href: 'https://github.com/oaisolutions',         label: 'GitHub' },
+      { icon: Github,    href: 'https://github.com/aiosolutions',         label: 'GitHub' },
       { icon: Mail,      href: 'mailto:moonravendigital@gmail.com',       label: 'Email' },
     ],
   },
@@ -38,13 +38,13 @@ export default function About({ onStartChat }) {
           <h2 className="font-display text-4xl md:text-5xl font-normal mb-4" style={{ color: 'var(--warm-900)' }}>
             Meet the Minds Behind
             <br />
-            <span className="italic" style={{ color: 'var(--gold)' }}>OAI Solutions</span>
+            <span className="italic" style={{ color: 'var(--gold)' }}>AIO Solutions</span>
           </h2>
           <p
             className="text-base font-light max-w-xl mx-auto mt-5"
             style={{ color: 'var(--taupe)', fontFamily: 'DM Sans' }}
           >
-            OAI Solutions (Alpha Omega Solutions) is a boutique AI engineering studio built for
+            AIO Solutions (Alpha Omega Solutions) is a boutique AI engineering studio built for
             entrepreneurs and businesses who demand more than generic results.
           </p>
           <div className="divider-gold mt-6" />

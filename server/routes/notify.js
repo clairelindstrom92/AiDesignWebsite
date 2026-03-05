@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const EMAIL_TO = process.env.EMAIL_TO || 'moonravendigital@gmail.com';
-const EMAIL_FROM = process.env.EMAIL_FROM || 'noreply@oaisolutions.com';
-const CALENDLY = process.env.CALENDLY_LINK || 'https://calendly.com/oaisolutions';
+const EMAIL_FROM = process.env.EMAIL_FROM || 'noreply@aiosolutions.com';
+const CALENDLY = process.env.CALENDLY_LINK || 'https://calendly.com/aiosolutions';
 
 let resend;
 if (process.env.RESEND_API_KEY) {
@@ -32,7 +32,7 @@ function buildLeadEmailHtml({ leadInfo, brief, transcript, type = 'assessment' }
     <!-- Header -->
     <div style="text-align:center;margin-bottom:32px">
       <div style="font-size:36px;margin-bottom:8px">🌕</div>
-      <h1 style="font-size:22px;font-weight:300;color:#e8e4dd;margin:0">OAI Solutions</h1>
+      <h1 style="font-size:22px;font-weight:300;color:#e8e4dd;margin:0">AIO Solutions</h1>
       <p style="color:#8a7a60;font-size:13px;margin:4px 0 0">Alpha Omega Solutions — Lead Notification</p>
     </div>
 
@@ -84,7 +84,7 @@ function buildLeadEmailHtml({ leadInfo, brief, transcript, type = 'assessment' }
 
     <!-- Footer -->
     <div style="text-align:center;margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.06)">
-      <p style="color:#8a7a60;font-size:12px;margin:0">OAI Solutions — Alpha Omega Solutions<br/>
+      <p style="color:#8a7a60;font-size:12px;margin:0">AIO Solutions — Alpha Omega Solutions<br/>
       <a href="mailto:moonravendigital@gmail.com" style="color:#8a7a60">moonravendigital@gmail.com</a></p>
     </div>
 
@@ -115,7 +115,7 @@ router.post('/lead', async (req, res) => {
   try {
     const result = await sendEmail(
       EMAIL_TO,
-      `🔷 New OAI Solutions Lead: ${name} — ${service}`,
+      `🔷 New AIO Solutions Lead: ${name} — ${service}`,
       buildLeadEmailHtml({ leadInfo, brief, transcript })
     );
     res.json(result);
