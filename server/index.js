@@ -22,7 +22,7 @@ app.use('/api/leads',   require('./routes/leads'));
 
 // Health check
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok', service: 'Generated Moon API', ts: new Date().toISOString() });
+  res.json({ status: 'ok', service: 'AIO Solutions API', ts: new Date().toISOString() });
 });
 
 // 404 handler
@@ -38,6 +38,6 @@ app.use((err, req, res, _next) => {
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`🌕 Generated Moon server running on port ${PORT}`);
+  console.log(`🔷 AIO Solutions server running on port ${PORT}`);
   console.log(`   Client URL: ${process.env.CLIENT_URL || 'http://localhost:5173'}`);
 });

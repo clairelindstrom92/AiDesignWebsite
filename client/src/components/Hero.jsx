@@ -131,7 +131,7 @@ export default function Hero({ onStartChat }) {
               className="text-xs tracking-widest uppercase"
               style={{ color: 'var(--gold)', fontFamily: 'DM Sans', fontWeight: 500 }}
             >
-              AI Design Studio
+              AI Solutions
             </span>
           </div>
 
