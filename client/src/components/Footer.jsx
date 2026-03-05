@@ -1,11 +1,11 @@
 import { Mail, Linkedin, Github, Instagram, ArrowRight } from 'lucide-react';
 
-const CALENDLY = import.meta.env.VITE_CALENDLY_LINK || 'https://calendly.com/luxuryaidesigns';
+const CALENDLY = import.meta.env.VITE_CALENDLY_LINK || 'https://calendly.com/oaisolutions';
 
 const SOCIAL = [
   { icon: Linkedin,  href: 'https://linkedin.com/in/clairelindstrom', label: 'LinkedIn' },
   { icon: Github,    href: 'https://github.com/clairelindstrom',       label: 'GitHub' },
-  { icon: Instagram, href: 'https://instagram.com/luxuryaidesigns',    label: 'Instagram' },
+  { icon: Instagram, href: 'https://instagram.com/oaisolutions',       label: 'Instagram' },
   { icon: Mail,      href: 'mailto:moonravendigital@gmail.com',        label: 'Email' },
 ];
 
@@ -31,14 +31,14 @@ export default function Footer({ onStartChat }) {
             <div className="flex items-center gap-2 mb-4">
               <span style={{ color: 'var(--gold)', fontSize: 18 }}>✦</span>
               <span className="font-display text-lg font-normal" style={{ color: 'var(--parchment)' }}>
-                Luxury AI Designs
+                OAI Solutions
               </span>
             </div>
             <p
               className="text-sm font-light leading-relaxed mb-5"
               style={{ color: 'rgba(240,228,210,0.45)', fontFamily: 'DM Sans' }}
             >
-              A boutique AI design studio for brands that refuse to blend in. Portfolios, websites, brand identity, and automation — built to convert.
+              OAI Solutions (Alpha Omega Solutions) — AI-powered websites, apps, lead automation, and custom integrations for forward-thinking businesses.
             </p>
             <div className="flex items-center gap-2.5">
               {SOCIAL.map(({ icon: Icon, href, label }) => (
@@ -175,7 +175,7 @@ export default function Footer({ onStartChat }) {
             className="text-xs"
             style={{ color: 'rgba(240,228,210,0.25)', fontFamily: 'DM Sans' }}
           >
-            © {new Date().getFullYear()} Luxury AI Designs · Claire Lindstrom · All rights reserved
+            © {new Date().getFullYear()} OAI Solutions · All rights reserved
           </p>
           <div className="flex items-center gap-3">
             <span className="text-xs" style={{ color: 'rgba(201,169,102,0.4)', fontFamily: 'DM Sans' }}>

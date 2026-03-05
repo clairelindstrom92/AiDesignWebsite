@@ -47,7 +47,7 @@ export default function Navbar({ onStartChat }) {
               className="font-display text-lg font-medium tracking-wide"
               style={{ color: 'var(--warm-900)' }}
             >
-              Luxury AI Designs
+              OAI Solutions
             </span>
           </a>
 
